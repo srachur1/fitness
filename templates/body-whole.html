@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+{% block title %}Whole Body{% endblock %}
+{% block head %}
+	<link type="text/css"  rel="stylesheet" href="{{ url_for('static', filename='css/exercises.css') }}"/>
+{% endblock %}
+{% block content %}
+	<h1>Whole Body Exercises</h1>
+	<div class="w3-container  w3-padding-16">
+        <div class="card-video left">
+            <h4>Deadlift</h4>
+            <iframe width="653" height="380" src="https://www.youtube.com/embed/hCDzSR6bW10" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+        <div class="card-video right">
+            <h4>Pullups</h4>
+            <iframe width="653" height="380" src="https://www.youtube.com/embed/Dhz1FjpO_2o" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+        <div class="card-video left">
+            <h4>Clean and Jerk</h4>
+            <iframe width="653" height="380" src="https://www.youtube.com/embed/9HyWjAk7fhY" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+        <div class="card-video right">
+            <h4>Snatch</h4>
+            <iframe width="653" height="380" src="https://www.youtube.com/embed/UBc5N_-xdqo" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+{% endblock %}

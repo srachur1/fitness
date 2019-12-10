@@ -1,0 +1,35 @@
+{% extends "template.html" %}
+{% block title %}Member Registration{% endblock %}
+{% block content %}
+<div id="msg"></div>
+<div style="clear: both;"></div>
+<div id="signupform">
+	<h2>Sign Up</h2>
+	<dl>
+		<p>
+			<input id="fullname" value="" type="text" placeholder="Full Name" required>
+		</p>
+		<p>
+			<input id="email" value="" type="text" placeholder="Email" required>
+		</p>
+		<p>
+			<input id="password" value="" type="password" placeholder="Password" autocomplete="off" required>
+		</p>
+		<p>
+			<input id="cnfpassword" value="" type="password" placeholder="Confirm Password" autocomplete="off" required>
+		</p>
+		<p>
+			<input id="weight" value="" type="text" placeholder="Weight(lb)" required>
+		</p>
+		<p>
+			<input id="height" value="" type="text" placeholder="Height(ft)" required>
+		</p>
+		<p>
+			<input id="age" value="" type="text" placeholder="Age(years)" required>
+		</p>
+	</dl>
+	<p>
+		<input type="button" id="signupSubmit" value="Submit">
+	</p>
+</div>
+{% endblock %}

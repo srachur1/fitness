@@ -1,0 +1,24 @@
+{% extends "template.html" %}
+{% block title %}Weight Loss Calculator{% endblock %}
+{% block content %}
+	<h1>Weight Loss Calculator</h1>
+	<div id="msg"></div>
+	<div style="clear:both;"></div>
+	<div>
+		<div class="row">
+			<div class="col-s-3">Weight in lbs :</div>
+			<div class="col-s-3"><input type="text" id="weight" required="required"/></div>
+		</div> 
+		<div class="row">
+			<div class="col-s-3">Height(inches):</div>
+			<div class="col-s-3"><input type="text" id="height" required="required"/></div>
+		</div>
+		<div class="row">
+			<div class="col-s-3">Age in Years :</div>
+			<div class="col-s-3"><input type="text" id="age" required="required"/></div>
+		</div>   
+		<p>
+			<input type="button" value="Calculate" id="weightloss"/>
+		</p>
+	</div>
+{% endblock %}

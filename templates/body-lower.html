@@ -1,0 +1,31 @@
+{% extends "template.html" %}
+{% block title %}Lower Body{% endblock %}
+{% block head %}
+	<link type="text/css"  rel="stylesheet" href="{{ url_for('static', filename='css/exercises.css') }}"/>
+{% endblock %}
+{% block content %}
+	<h1>Lower Body Exercises</h1>
+    <div class="w3-container  w3-padding-16">
+        <div class="card-video left">
+            <h4>Squats</h4>
+            <iframe width="653" height="380" src="https://www.youtube.com/embed/zcJeHchdp9o" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+        <div class="card-video right">
+            <h4>Glutes</h4>
+            <iframe width="653" height="380" src="https://www.youtube.com/embed/cz1gh_aYn5k" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+
+        <div class="card-video left">
+            <h4>Hamstrings</h4>
+            <iframe width="653" height="380" src="https://www.youtube.com/embed/vynsCfHZ69A" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+        <div class="card-video right">
+            <h4>Calves</h4>
+            <iframe width="653" height="380" src="https://www.youtube.com/embed/MuD58rqj8SE" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
+        </div>
+    </div>
+{% endblock %}

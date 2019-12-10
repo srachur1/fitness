@@ -1,0 +1,48 @@
+<div class="header">
+	<span>
+		<div class="hamburger dropdown">
+			<i class="fa fa-bars"></i>
+			<div class="dropdown-content">
+				<a href="{{ url_for('.home') }}">Home</a>
+			</div>
+		</div>
+	</span>
+	<ul class="header-links">
+		<li><a href="{{ url_for('.home') }}">Home</a></li>
+		<li>
+			<div class="dropdown">
+				<button class="dropbtn">Calculators
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="{{ url_for('.weightloss') }}">Weight Loss</a>
+					<a href="{{ url_for('.musclegain') }}">Muscle Gain</a>
+					<a href="{{ url_for('.maintainweight') }}">Maintain Weight</a>					
+				</div>
+			</div>
+		</li>
+		<li>
+			<div class="dropdown">
+				<button class="dropbtn">Exercises
+					<i class="fa fa-caret-down"></i>
+				</button>
+				<div class="dropdown-content">
+					<a href="{{ url_for('.body_upper') }}" class="sub-menu">Upper Body</a>
+					<a href="{{ url_for('.body_lower') }}" class="sub-menu">Lower Body</a>
+					<a href="{{ url_for('.body_whole') }}" class="sub-menu">Whole Body</a>
+				</div>
+			</div>
+		</li>
+		<li><a href="{{ url_for('.products') }}">Our Products</a></li>
+		<div id="sign" style="float: right;">
+			<li><a href="{{ url_for('.singup_page') }}">Sign Up</a></li>
+			<li><a href="{{ url_for('.login_page') }}">Login</a></li>
+		</div>
+		<div id="logoff" style="float: right; display: none;">
+			<li><a href="#" id="logout">Log Off</a></li>
+		</div>
+	</ul>
+	<div>
+		<img aria-label="Logo Image" class="logo" src="/static/images/arnold.png"></img>
+	</div>
+</div>

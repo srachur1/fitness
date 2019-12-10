@@ -1,0 +1,52 @@
+{% extends "template.html" %}
+{% block title %}Our Products{% endblock %}
+{% block head %}
+	<link type="text/css"  rel="stylesheet" href="{{ url_for('static', filename='css/myproducts.css') }}"/>
+{% endblock %}
+{% block content %}
+	<h1>Our Products</h1>
+    <div id="productList"></div>
+	
+	<script id="prod_template" type="text/template">
+        <div class="col-12">
+		{% raw %}
+			{{#.}}
+				<div class="prodItem">
+					<a href="https://www.amazon.com/s?k={{name}}" target=_blank ><img src={{url}}></a>
+					<!-- <a>{{id}}</a> -->
+					<a>{{name}}</a>
+					<a>${{price}}</a>                
+				</div>
+			{{/.}}
+		{% endraw %}
+        </div>
+	</script>
+   
+    <script>
+        function item(id, name, price, url) {
+            this.id = id;
+            this.name = name;
+            this.price = price;
+            this.url = url;
+        }
+		
+        var items = [];
+        items.push(new item("1", "Shaker Bottle", "5.99", "/static/images/products/bottle.jpg"));
+        items.push(new item("2", "Exercise Ball", "15.99", "/static/images/products/exerciseball.jpg"));
+        items.push(new item("3", "Fitness Tracker", "54.99", "/static/images/products/fitnesstracker.jpg"));
+        items.push(new item("4", "Knee Sleeves", "12.99", "/static/images/products/kneesleeves.jpg"));
+        items.push(new item("5", "Exercise Mat", "14.99", "/static/images/products/mat.jpg"));
+        items.push(new item("6", "Whey Protein", "49.99", "/static/images/products/protein.jpg"));
+        items.push(new item("7", "Resistance Bands", "5.99", "/static/images/products/bands.jpg"));
+        items.push(new item("8", "Sneakers", "34.99", "/static/images/products/shoes.jpg"));
+        items.push(new item("9", "Tank Tops", "84.99", "/static/images/products/tanktop.jpg"));
+        items.push(new item("10", "Weights", "14.99", "/static/images/products/weights.jpg"));
+		items.push(new item("11", "Workout Bench", "14.99", "/static/images/products/bench.jpg"));
+		items.push(new item("12", "Ab Roller", "14.99", "/static/images/products/abroller.jpg"));
+        
+		var template = $("#prod_template").html();
+        var text = Mustache.render(template, items);
+
+        $("#productList").html(text);
+    </script>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends "template.html" %}
+{% block title %}Member Login{% endblock %}
+{% block content %}
+<div id="msg"></div>
+<div style="clear: both;"></div>
+<div id="loginform">
+	<h2>Login</h2>
+	<dl>
+		<p>
+			<input id="email" value="" type="text" placeholder="Email" required>
+		</p>
+		<p>
+			<input id="password" value="" type="password" placeholder="Password" autocomplete="off" required>
+		</p>
+	</dl>
+	<p>
+		<input type="button" id="loginSubmit" value="Submit">
+	</p>
+</div>
+{% endblock %}

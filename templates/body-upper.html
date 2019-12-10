@@ -1,0 +1,30 @@
+{% extends "template.html" %}
+{% block title %}Upper Body{% endblock %}
+{% block head %}
+	<link type="text/css"  rel="stylesheet" href="{{ url_for('static', filename='css/exercises.css') }}"/>
+{% endblock %}
+{% block content %}
+	<h1>Upper Body Exercises</h1>
+    <div class="w3-container  w3-padding-16">
+		<div class="card-video left">
+			<h4>Biceps Workout</h4>
+			<iframe width="653" height="380" src="https://www.youtube.com/embed/gozU3CUIizs" frameborder="0" allow="autoplay; encrypted-media"
+				allowfullscreen></iframe>
+		</div>
+		<div class="card-video right">
+			<h4>Chest Workout</h4>
+			<iframe width="653" height="380" src="https://www.youtube.com/embed/89e518dl4I8" frameborder="0" allow="autoplay; encrypted-media"
+				allowfullscreen></iframe>
+		</div>
+		<div class="card-video left">
+			<h4>Shoulders Workout</h4>
+			<iframe width="653" height="380" src="https://www.youtube.com/embed/jv31A4Ab4nA" frameborder="0" allow="autoplay; encrypted-media"
+				allowfullscreen></iframe>
+		</div>
+		<div class="card-video right">
+			<h4>Ab Workout</h4>
+			<iframe width="653" height="380" src="https://www.youtube.com/embed/qk97w6ZmV90" frameborder="0" allow="autoplay; encrypted-media"
+				allowfullscreen></iframe>
+		</div>
+	</div>
+{% endblock %}
